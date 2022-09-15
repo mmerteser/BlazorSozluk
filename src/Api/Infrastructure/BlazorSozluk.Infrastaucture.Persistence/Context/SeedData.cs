@@ -28,7 +28,11 @@ namespace BlazorSozluk.Infrastaucture.Persistence.Context
 
             return result;
         }
-
+        /// <summary>
+        /// Data seeding işlemleri yapılıyor. User tablosunda veri varsa çalışmayacaktır
+        /// </summary>
+        /// <param name="configuration"></param>
+        /// <returns></returns>
         public async Task SeedAsync(IConfiguration configuration)
         {
             var dbContextBuilder = new DbContextOptionsBuilder()
